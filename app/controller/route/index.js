@@ -1,0 +1,17 @@
+'use strict';
+let router = require('express').Router();
+const userRoute = require('./test');
+const userMasterRoute = require('./user_master');
+const userTypeRoute = require('./usertype');
+const schoolTypeRoute = require('./schooltype');
+const eventTypeRoute = require('./eventtype');
+const eventRegisterRoute = require('./event_register');
+const eventCreateRoute = require('./event_create');
+router.use('/test', userRoute);
+router.use('/userMaster', userMasterRoute);
+router.use('/userType', userTypeRoute);
+router.use('/schoolType', schoolTypeRoute);
+router.use('/eventType', eventTypeRoute);
+router.use('/eventRegister', eventRegisterRoute);
+router.use('/eventCreate', eventCreateRoute);
+module.exports= router;
